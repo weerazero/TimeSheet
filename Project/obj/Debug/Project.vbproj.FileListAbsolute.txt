@@ -1,0 +1,14 @@
+C:\Users\Poom__000\source\repos\Project\Project\bin\Debug\Project.exe.config
+C:\Users\Poom__000\source\repos\Project\Project\bin\Debug\Project.exe
+C:\Users\Poom__000\source\repos\Project\Project\bin\Debug\Project.pdb
+C:\Users\Poom__000\source\repos\Project\Project\bin\Debug\Project.xml
+C:\Users\Poom__000\source\repos\Project\Project\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\Poom__000\source\repos\Project\Project\obj\Debug\Project.vbprojAssemblyReference.cache
+C:\Users\Poom__000\source\repos\Project\Project\obj\Debug\Project.Form1.resources
+C:\Users\Poom__000\source\repos\Project\Project\obj\Debug\Project.Resources.resources
+C:\Users\Poom__000\source\repos\Project\Project\obj\Debug\Project.vbproj.GenerateResource.cache
+C:\Users\Poom__000\source\repos\Project\Project\obj\Debug\Project.vbproj.CoreCompileInputs.cache
+C:\Users\Poom__000\source\repos\Project\Project\obj\Debug\Project.vbproj.CopyComplete
+C:\Users\Poom__000\source\repos\Project\Project\obj\Debug\Project.exe
+C:\Users\Poom__000\source\repos\Project\Project\obj\Debug\Project.xml
+C:\Users\Poom__000\source\repos\Project\Project\obj\Debug\Project.pdb
