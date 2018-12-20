@@ -12,3 +12,17 @@ C:\Users\Poom__000\source\repos\Project\Project\obj\Debug\Project.vbproj.CopyCom
 C:\Users\Poom__000\source\repos\Project\Project\obj\Debug\Project.exe
 C:\Users\Poom__000\source\repos\Project\Project\obj\Debug\Project.xml
 C:\Users\Poom__000\source\repos\Project\Project\obj\Debug\Project.pdb
+E:\github\TimeSheet\Project\bin\Debug\Project.exe.config
+E:\github\TimeSheet\Project\bin\Debug\Project.exe
+E:\github\TimeSheet\Project\bin\Debug\Project.pdb
+E:\github\TimeSheet\Project\bin\Debug\Project.xml
+E:\github\TimeSheet\Project\obj\Debug\Project.vbprojAssemblyReference.cache
+E:\github\TimeSheet\Project\obj\Debug\Project.Form1.resources
+E:\github\TimeSheet\Project\obj\Debug\Project.Form2.resources
+E:\github\TimeSheet\Project\obj\Debug\Project.Resources.resources
+E:\github\TimeSheet\Project\obj\Debug\Project.vbproj.GenerateResource.cache
+E:\github\TimeSheet\Project\obj\Debug\Project.vbproj.CoreCompileInputs.cache
+E:\github\TimeSheet\Project\obj\Debug\Project.vbproj.CopyComplete
+E:\github\TimeSheet\Project\obj\Debug\Project.exe
+E:\github\TimeSheet\Project\obj\Debug\Project.xml
+E:\github\TimeSheet\Project\obj\Debug\Project.pdb

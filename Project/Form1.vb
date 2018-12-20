@@ -1,4 +1,7 @@
-﻿Public Class Form1
+﻿Imports System.Data.SqlClient
+Imports System.Data
+Imports System.Configuration
+Public Class Form1
 
     Private Sub BunifuTileButton1_Click(sender As Object, e As EventArgs) Handles BunifuTileButton1.Click
         Me.Close()
@@ -8,6 +11,30 @@
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim username As String = txtusername.Text()
         Dim password As String = txtusername.Text()
+        Dim objConn As New SqlConnection
+        Dim objCmd As New SqlCommand
+        Dim strConnString, strSQL As String
+        strConnString = ConfigurationManager.ConnectionStrings.Item(1).ConnectionString
+        objConn.ConnectionString = strConnString
+        objConn.Open()
+        Dim intNumRows As Integer
+        strSQL = "SELECT COUNT(*) FROM member WHERE Username = '" & username & "' AND Password = '" & password & "' "
+        objCmd = New SqlCommand(strSQL, objConn)
+        intNumRows = objCmd.ExecuteScalar()
+        MessageBox.Show("Connect")
+        If intNumRows > 0 Then
+            Dim frm As New Form2
+            'frm._strUser = Me.tbId.Text
+            ' frm.LoadInfor()
+            frm.Show()
+
+            Me.Hide()
+        Else
+            MessageBox.Show("Username or Password Incorrect")
+        End If
+
+        objConn.Close()
+        objConn = Nothing
 
 
     End Sub
