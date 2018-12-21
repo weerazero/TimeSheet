@@ -29,6 +29,7 @@ Partial Class Form1
         Me.BunifuTileButton1 = New Bunifu.Framework.UI.BunifuTileButton()
         Me.warningpass = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuTileButton3 = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'txtusername
@@ -39,9 +40,9 @@ Partial Class Form1
         Me.txtusername.HintForeColor = System.Drawing.Color.DimGray
         Me.txtusername.HintText = "Username"
         Me.txtusername.isPassword = False
-        Me.txtusername.LineFocusedColor = System.Drawing.Color.Tomato
-        Me.txtusername.LineIdleColor = System.Drawing.Color.Salmon
-        Me.txtusername.LineMouseHoverColor = System.Drawing.Color.Tomato
+        Me.txtusername.LineFocusedColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.txtusername.LineIdleColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.txtusername.LineMouseHoverColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.txtusername.LineThickness = 4
         Me.txtusername.Location = New System.Drawing.Point(111, 130)
         Me.txtusername.Margin = New System.Windows.Forms.Padding(4)
@@ -56,27 +57,26 @@ Partial Class Form1
         Me.txtPassword.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.txtPassword.ForeColor = System.Drawing.Color.DimGray
         Me.txtPassword.HintForeColor = System.Drawing.Color.DimGray
-        Me.txtPassword.HintText = ""
-        Me.txtPassword.isPassword = True
-        Me.txtPassword.LineFocusedColor = System.Drawing.Color.Tomato
-        Me.txtPassword.LineIdleColor = System.Drawing.Color.Salmon
-        Me.txtPassword.LineMouseHoverColor = System.Drawing.Color.Tomato
+        Me.txtPassword.HintText = "Password"
+        Me.txtPassword.isPassword = False
+        Me.txtPassword.LineFocusedColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.txtPassword.LineIdleColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.txtPassword.LineMouseHoverColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.txtPassword.LineThickness = 4
         Me.txtPassword.Location = New System.Drawing.Point(111, 217)
         Me.txtPassword.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(370, 44)
         Me.txtPassword.TabIndex = 1
-        Me.txtPassword.Text = "Password"
         Me.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'btnLogin
         '
         Me.btnLogin.ActiveBorderThickness = 1
         Me.btnLogin.ActiveCornerRadius = 20
-        Me.btnLogin.ActiveFillColor = System.Drawing.Color.Salmon
+        Me.btnLogin.ActiveFillColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.btnLogin.ActiveForecolor = System.Drawing.Color.WhiteSmoke
-        Me.btnLogin.ActiveLineColor = System.Drawing.Color.Salmon
+        Me.btnLogin.ActiveLineColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.btnLogin.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange
         Me.btnLogin.BackColor = System.Drawing.SystemColors.Control
         Me.btnLogin.BackgroundImage = CType(resources.GetObject("btnLogin.BackgroundImage"), System.Drawing.Image)
@@ -86,9 +86,9 @@ Partial Class Form1
         Me.btnLogin.ForeColor = System.Drawing.Color.Honeydew
         Me.btnLogin.IdleBorderThickness = 1
         Me.btnLogin.IdleCornerRadius = 20
-        Me.btnLogin.IdleFillColor = System.Drawing.Color.Salmon
+        Me.btnLogin.IdleFillColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.btnLogin.IdleForecolor = System.Drawing.Color.WhiteSmoke
-        Me.btnLogin.IdleLineColor = System.Drawing.Color.Salmon
+        Me.btnLogin.IdleLineColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.btnLogin.Location = New System.Drawing.Point(201, 313)
         Me.btnLogin.Margin = New System.Windows.Forms.Padding(5)
         Me.btnLogin.Name = "btnLogin"
@@ -98,9 +98,9 @@ Partial Class Form1
         '
         'BunifuTileButton1
         '
-        Me.BunifuTileButton1.BackColor = System.Drawing.Color.Salmon
-        Me.BunifuTileButton1.color = System.Drawing.Color.Salmon
-        Me.BunifuTileButton1.colorActive = System.Drawing.Color.Tomato
+        Me.BunifuTileButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.BunifuTileButton1.color = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.BunifuTileButton1.colorActive = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.BunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuTileButton1.Font = New System.Drawing.Font("Century Gothic", 15.75!)
         Me.BunifuTileButton1.ForeColor = System.Drawing.Color.White
@@ -128,9 +128,9 @@ Partial Class Form1
         '
         'BunifuTileButton3
         '
-        Me.BunifuTileButton3.BackColor = System.Drawing.Color.Salmon
-        Me.BunifuTileButton3.color = System.Drawing.Color.Salmon
-        Me.BunifuTileButton3.colorActive = System.Drawing.Color.Tomato
+        Me.BunifuTileButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.BunifuTileButton3.color = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.BunifuTileButton3.colorActive = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.BunifuTileButton3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuTileButton3.Font = New System.Drawing.Font("Century Gothic", 15.75!)
         Me.BunifuTileButton3.ForeColor = System.Drawing.Color.White
@@ -145,12 +145,19 @@ Partial Class Form1
         Me.BunifuTileButton3.Size = New System.Drawing.Size(55, 51)
         Me.BunifuTileButton3.TabIndex = 7
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(347, 436)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 8
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(579, 508)
-        Me.ControlBox = False
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.BunifuTileButton3)
         Me.Controls.Add(Me.warningpass)
         Me.Controls.Add(Me.BunifuTileButton1)
@@ -171,4 +178,5 @@ Partial Class Form1
     Friend WithEvents BunifuTileButton1 As Bunifu.Framework.UI.BunifuTileButton
     Friend WithEvents warningpass As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents BunifuTileButton3 As Bunifu.Framework.UI.BunifuTileButton
+    Friend WithEvents TextBox1 As TextBox
 End Class

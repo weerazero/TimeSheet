@@ -26,3 +26,17 @@ E:\github\TimeSheet\Project\obj\Debug\Project.vbproj.CopyComplete
 E:\github\TimeSheet\Project\obj\Debug\Project.exe
 E:\github\TimeSheet\Project\obj\Debug\Project.xml
 E:\github\TimeSheet\Project\obj\Debug\Project.pdb
+C:\Users\58121098-6\Desktop\TimeSheet\Project\bin\Debug\Project.exe.config
+C:\Users\58121098-6\Desktop\TimeSheet\Project\bin\Debug\Project.exe
+C:\Users\58121098-6\Desktop\TimeSheet\Project\bin\Debug\Project.pdb
+C:\Users\58121098-6\Desktop\TimeSheet\Project\bin\Debug\Project.xml
+C:\Users\58121098-6\Desktop\TimeSheet\Project\obj\Debug\Project.vbprojAssemblyReference.cache
+C:\Users\58121098-6\Desktop\TimeSheet\Project\obj\Debug\Project.Form1.resources
+C:\Users\58121098-6\Desktop\TimeSheet\Project\obj\Debug\Project.Form2.resources
+C:\Users\58121098-6\Desktop\TimeSheet\Project\obj\Debug\Project.Resources.resources
+C:\Users\58121098-6\Desktop\TimeSheet\Project\obj\Debug\Project.vbproj.GenerateResource.cache
+C:\Users\58121098-6\Desktop\TimeSheet\Project\obj\Debug\Project.vbproj.CoreCompileInputs.cache
+C:\Users\58121098-6\Desktop\TimeSheet\Project\obj\Debug\Project.vbproj.CopyComplete
+C:\Users\58121098-6\Desktop\TimeSheet\Project\obj\Debug\Project.exe
+C:\Users\58121098-6\Desktop\TimeSheet\Project\obj\Debug\Project.xml
+C:\Users\58121098-6\Desktop\TimeSheet\Project\obj\Debug\Project.pdb
