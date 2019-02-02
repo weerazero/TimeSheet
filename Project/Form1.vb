@@ -10,7 +10,22 @@ Public Class Form1
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim username As String = txtusername.Text()
-        Dim password As String = txtusername.Text()
+        Dim password As String = txtPassword.Text()
+
+
+        'Dim check As New checkAuth()
+        'check.username = username
+        'check.password = password
+
+        'If check.c_Auth() = True Then
+        '    Dim frm As New Form2
+        '    frm.Show()
+        '    Me.Hide()
+        'Else
+        '    MessageBox.Show("Missing ")
+
+        'End If
+
         'Dim objConn As New SqlConnection
         'Dim objCmd As New SqlCommand
         'Dim strConnString, strSQL As String
@@ -35,9 +50,7 @@ Public Class Form1
 
         'objConn.Close()
         'objConn = Nothing
-        Dim frm As New Form2
-        frm.Show()
-        Me.Hide()
+
 
     End Sub
 
