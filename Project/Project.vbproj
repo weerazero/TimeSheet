@@ -80,10 +80,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="checkAuth.vb" />
-    <Compile Include="DataClasses1.designer.vb">
+    <Compile Include="DataClasses.designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataClasses1.dbml</DependentUpon>
+      <DependentUpon>DataClasses.dbml</DependentUpon>
     </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
@@ -119,6 +119,12 @@
     <Compile Include="UserControl1.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UserControl2.Designer.vb">
+      <DependentUpon>UserControl2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl2.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -136,15 +142,18 @@
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControl2.resx">
+      <DependentUpon>UserControl2.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="DataClasses1.dbml">
+    <None Include="DataClasses.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataClasses1.designer.vb</LastGenOutput>
+      <LastGenOutput>DataClasses.designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DataClasses1.dbml.layout">
-      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    <None Include="DataClasses.dbml.layout">
+      <DependentUpon>DataClasses.dbml</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

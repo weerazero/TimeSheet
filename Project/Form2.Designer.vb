@@ -31,7 +31,6 @@ Partial Class Form2
         Me.BunifuFlatButton3 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton2 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
-
         Me.Panel1.SuspendLayout()
         CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -249,9 +248,6 @@ Partial Class Form2
         Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.White
         Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'TableAdapterManager1
-        '
-
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
