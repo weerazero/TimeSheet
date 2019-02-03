@@ -105,7 +105,7 @@ Partial Class Form2
         Me.BunifuFlatButton5.TabIndex = 4
         Me.BunifuFlatButton5.Text = "BunifuFlatButton5"
         Me.BunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BunifuFlatButton5.Textcolor = System.Drawing.Color.White
+        Me.BunifuFlatButton5.Textcolor = System.Drawing.Color.Black
         Me.BunifuFlatButton5.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'BunifuFlatButton4
@@ -140,7 +140,7 @@ Partial Class Form2
         Me.BunifuFlatButton4.TabIndex = 3
         Me.BunifuFlatButton4.Text = "BunifuFlatButton4"
         Me.BunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BunifuFlatButton4.Textcolor = System.Drawing.Color.White
+        Me.BunifuFlatButton4.Textcolor = System.Drawing.Color.Black
         Me.BunifuFlatButton4.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'BunifuFlatButton3
@@ -175,7 +175,7 @@ Partial Class Form2
         Me.BunifuFlatButton3.TabIndex = 2
         Me.BunifuFlatButton3.Text = "BunifuFlatButton3"
         Me.BunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BunifuFlatButton3.Textcolor = System.Drawing.Color.White
+        Me.BunifuFlatButton3.Textcolor = System.Drawing.Color.Black
         Me.BunifuFlatButton3.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'BunifuFlatButton2
@@ -210,7 +210,7 @@ Partial Class Form2
         Me.BunifuFlatButton2.TabIndex = 1
         Me.BunifuFlatButton2.Text = "123"
         Me.BunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BunifuFlatButton2.Textcolor = System.Drawing.Color.White
+        Me.BunifuFlatButton2.Textcolor = System.Drawing.Color.Black
         Me.BunifuFlatButton2.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'BunifuFlatButton1
@@ -245,7 +245,7 @@ Partial Class Form2
         Me.BunifuFlatButton1.TabIndex = 0
         Me.BunifuFlatButton1.Text = "BunifuFlatButton1"
         Me.BunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.White
+        Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.Black
         Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'Form2
@@ -275,5 +275,5 @@ Partial Class Form2
     Friend WithEvents BunifuFlatButton4 As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents BunifuFlatButton3 As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents BunifuFlatButton2 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents TableAdapterManager1 As _DB_TimesheetDataSet2TableAdapters.TableAdapterManager
+
 End Class
