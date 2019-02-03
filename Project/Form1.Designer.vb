@@ -56,7 +56,7 @@ Partial Class Form1
         Me.txtPassword.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.txtPassword.ForeColor = System.Drawing.Color.DimGray
         Me.txtPassword.HintForeColor = System.Drawing.Color.DimGray
-        Me.txtPassword.HintText = "Password"
+        Me.txtPassword.HintText = ""
         Me.txtPassword.isPassword = False
         Me.txtPassword.LineFocusedColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.txtPassword.LineIdleColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(242, Byte), Integer))
@@ -67,6 +67,7 @@ Partial Class Form1
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(370, 44)
         Me.txtPassword.TabIndex = 1
+        Me.txtPassword.Text = "Password"
         Me.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'btnLogin
@@ -108,10 +109,10 @@ Partial Class Form1
         Me.BunifuTileButton1.ImageZoom = 60
         Me.BunifuTileButton1.LabelPosition = 41
         Me.BunifuTileButton1.LabelText = "X"
-        Me.BunifuTileButton1.Location = New System.Drawing.Point(509, 15)
+        Me.BunifuTileButton1.Location = New System.Drawing.Point(543, 15)
         Me.BunifuTileButton1.Margin = New System.Windows.Forms.Padding(6)
         Me.BunifuTileButton1.Name = "BunifuTileButton1"
-        Me.BunifuTileButton1.Size = New System.Drawing.Size(55, 51)
+        Me.BunifuTileButton1.Size = New System.Drawing.Size(21, 21)
         Me.BunifuTileButton1.TabIndex = 4
         '
         'warningpass
@@ -138,16 +139,16 @@ Partial Class Form1
         Me.BunifuTileButton3.ImageZoom = 60
         Me.BunifuTileButton3.LabelPosition = 41
         Me.BunifuTileButton3.LabelText = "-"
-        Me.BunifuTileButton3.Location = New System.Drawing.Point(455, 15)
+        Me.BunifuTileButton3.Location = New System.Drawing.Point(511, 15)
         Me.BunifuTileButton3.Margin = New System.Windows.Forms.Padding(6)
         Me.BunifuTileButton3.Name = "BunifuTileButton3"
-        Me.BunifuTileButton3.Size = New System.Drawing.Size(55, 51)
+        Me.BunifuTileButton3.Size = New System.Drawing.Size(20, 21)
         Me.BunifuTileButton3.TabIndex = 7
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
+        Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(579, 508)
         Me.Controls.Add(Me.BunifuTileButton3)
         Me.Controls.Add(Me.warningpass)
@@ -155,9 +156,11 @@ Partial Class Form1
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.txtusername)
+        Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.ImeMode = System.Windows.Forms.ImeMode.[On]
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.ResumeLayout(False)
         Me.PerformLayout()

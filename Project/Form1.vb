@@ -13,18 +13,18 @@ Public Class Form1
         Dim password As String = txtPassword.Text()
 
 
-        'Dim check As New checkAuth()
-        'check.username = username
-        'check.password = password
+        Dim check As New checkAuth()
+        check.username = username
+        check.password = password
 
-        'If check.c_Auth() = True Then
-        '    Dim frm As New Form2
-        '    frm.Show()
-        '    Me.Hide()
-        'Else
-        '    MessageBox.Show("Missing ")
+        If check.c_Auth() = True Then
+            Dim frm As New Form2
+            frm.Show()
+            Me.Hide()
+        Else
+            MessageBox.Show("Missing ")
 
-        'End If
+        End If
 
         'Dim objConn As New SqlConnection
         'Dim objCmd As New SqlCommand
@@ -57,11 +57,7 @@ Public Class Form1
     Private Sub txtusername_OnValueChanged(sender As Object, e As EventArgs) Handles txtusername.OnValueChanged, txtPassword.OnValueChanged
         txtPassword.isPassword = True
 
-        If txtPassword.Text.Length > 10 Then
-            txtPassword.LineFocusedColor = Color.DarkRed
-            warningpass.ForeColor = Color.Red
 
-        End If
     End Sub
 
 
@@ -71,6 +67,5 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 End Class
