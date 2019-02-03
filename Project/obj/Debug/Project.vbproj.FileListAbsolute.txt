@@ -40,3 +40,4 @@ C:\Users\58121098-6\Desktop\TimeSheet\Project\obj\Debug\Project.vbproj.CopyCompl
 C:\Users\58121098-6\Desktop\TimeSheet\Project\obj\Debug\Project.exe
 C:\Users\58121098-6\Desktop\TimeSheet\Project\obj\Debug\Project.xml
 C:\Users\58121098-6\Desktop\TimeSheet\Project\obj\Debug\Project.pdb
+E:\github\TimeSheet\Project\obj\Debug\Project.UserControl1.resources

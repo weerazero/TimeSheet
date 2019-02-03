@@ -12,7 +12,7 @@ Public Class Form1
         Dim username As String = txtusername.Text()
         Dim password As String = txtPassword.Text()
 
-        'Bug not fix
+
         'Dim check As New checkAuth()
         'check.username = username
         'check.password = password

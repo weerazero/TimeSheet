@@ -31,7 +31,7 @@ Partial Class Form2
         Me.BunifuFlatButton3 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton2 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.TableAdapterManager1 = New Project._DB_TimesheetDataSet2TableAdapters.TableAdapterManager()
+
         Me.Panel1.SuspendLayout()
         CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -251,11 +251,7 @@ Partial Class Form2
         '
         'TableAdapterManager1
         '
-        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager1.Connection = Nothing
-        Me.TableAdapterManager1.db_TestTableAdapter = Nothing
-        Me.TableAdapterManager1.UpdateOrder = Project._DB_TimesheetDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
+
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)

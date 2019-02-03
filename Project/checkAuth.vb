@@ -20,13 +20,14 @@
     End Property
 
     Public Function c_Auth() As Boolean
-        Dim db As New DataClasses1DataContext
-        Dim query = From test In db.db_Tests
+        Dim db As New DataClassesDataContext
+
+        Dim query = From test In db.accounts
                     Select test
         For Each _Data In query
 
 
-            If _Data.username = _username And _Data.pass = _password Then
+            If _Data.id = _username And _Data.password = _password Then
                 Return True
             End If
         Next

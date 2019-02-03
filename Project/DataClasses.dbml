@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB-Timesheet" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=db-timesheet.database.windows.net;Initial Catalog=DB-Timesheet;Persist Security Info=True;User ID=db_sa" SettingsObjectName="Project.My.MySettings" SettingsPropertyName="DB_TimesheetConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.account" Member="accounts">
+    <Type Name="account">
+      <Column Name="id" Type="System.String" DbType="NVarChar(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="f_name" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="l_name" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="status_manager" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Association Name="account_project" Member="projects" ThisKey="id" OtherKey="manager_id" Type="project" />
+      <Association Name="account_timesheet" Member="timesheets" ThisKey="id" OtherKey="employee_id" Type="timesheet" />
+    </Type>
+  </Table>
+  <Table Name="dbo.activity" Member="activities">
+    <Type Name="activity">
+      <Column Name="id" Type="System.String" DbType="NVarChar(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="project_id" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Association Name="activity_timesheet" Member="timesheets" ThisKey="id" OtherKey="activity_id" Type="timesheet" />
+      <Association Name="project_activity" Member="project" ThisKey="project_id" OtherKey="id" Type="project" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.project" Member="projects">
+    <Type Name="project">
+      <Column Name="id" Type="System.String" DbType="NVarChar(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="project_code" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="manager_id" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="start_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="end_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="project_activity" Member="activities" ThisKey="id" OtherKey="project_id" Type="activity" />
+      <Association Name="account_project" Member="account" ThisKey="manager_id" OtherKey="id" Type="account" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.timesheet" Member="timesheets">
+    <Type Name="timesheet">
+      <Column Name="id" Type="System.String" DbType="NVarChar(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="employee_id" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="time_from" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="time_to" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="comment" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="activity_id" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Association Name="activity_timesheet" Member="activity" ThisKey="activity_id" OtherKey="id" Type="activity" IsForeignKey="true" />
+      <Association Name="account_timesheet" Member="account" ThisKey="employee_id" OtherKey="id" Type="account" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
