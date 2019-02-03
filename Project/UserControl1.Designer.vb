@@ -29,7 +29,7 @@ Partial Class UserControl1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Name = "UserControl1"
-        Me.Size = New System.Drawing.Size(1000, 520)
+        Me.Size = New System.Drawing.Size(757, 305)
         Me.ResumeLayout(False)
 
     End Sub
