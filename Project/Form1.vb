@@ -13,18 +13,18 @@ Public Class Form1
         Dim password As String = txtPassword.Text()
 
 
-        'Dim check As New checkAuth()
-        'check.username = username
-        'check.password = password
+        Dim check As New checkAuth()
+        check.username = username
+        check.password = password
 
-        'If check.c_Auth() = True Then
-        '    Dim frm As New Form2
-        '    frm.Show()
-        '    Me.Hide()
-        'Else
-        '    MessageBox.Show("Missing ")
+        If check.c_Auth() = True Then
+            Dim frm As New Form2
+            frm.Show()
+            Me.Hide()
+        Else
+            MessageBox.Show("Missing ")
 
-        'End If
+        End If
 
         'Dim objConn As New SqlConnection
         'Dim objCmd As New SqlCommand

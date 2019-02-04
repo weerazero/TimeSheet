@@ -41,3 +41,17 @@ C:\Users\58121098-6\Desktop\TimeSheet\Project\obj\Debug\Project.exe
 C:\Users\58121098-6\Desktop\TimeSheet\Project\obj\Debug\Project.xml
 C:\Users\58121098-6\Desktop\TimeSheet\Project\obj\Debug\Project.pdb
 E:\github\TimeSheet\Project\obj\Debug\Project.UserControl1.resources
+E:\github\TimeSheet2\Project\bin\Debug\Project.exe.config
+E:\github\TimeSheet2\Project\obj\Debug\Project.exe
+E:\github\TimeSheet2\Project\obj\Debug\Project.xml
+E:\github\TimeSheet2\Project\obj\Debug\Project.pdb
+E:\github\TimeSheet2\Project\bin\Debug\Project.exe
+E:\github\TimeSheet2\Project\bin\Debug\Project.pdb
+E:\github\TimeSheet2\Project\bin\Debug\Project.xml
+E:\github\TimeSheet2\Project\obj\Debug\Project.vbprojResolveAssemblyReference.cache
+E:\github\TimeSheet2\Project\obj\Debug\Project.Form1.resources
+E:\github\TimeSheet2\Project\obj\Debug\Project.Form2.resources
+E:\github\TimeSheet2\Project\obj\Debug\Project.Resources.resources
+E:\github\TimeSheet2\Project\obj\Debug\Project.UserControl1.resources
+E:\github\TimeSheet2\Project\obj\Debug\Project.UserControl2.resources
+E:\github\TimeSheet2\Project\obj\Debug\Project.vbproj.GenerateResource.Cache

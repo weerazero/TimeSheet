@@ -123,11 +123,13 @@ Partial Public Class account
 	
 	Private _password As String
 	
-	Private _status_manager As System.Nullable(Of Byte)
+	Private _status_manager As String
+	
+	Private _manager_id As String
 	
 	Private _projects As EntitySet(Of project)
 	
-	Private _timesheets As EntitySet(Of timesheet)
+	Private _timesheet As EntityRef(Of timesheet)
 	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
@@ -156,20 +158,24 @@ Partial Public Class account
     End Sub
     Partial Private Sub OnpasswordChanged()
     End Sub
-    Partial Private Sub Onstatus_managerChanging(value As System.Nullable(Of Byte))
+    Partial Private Sub Onstatus_managerChanging(value As String)
     End Sub
     Partial Private Sub Onstatus_managerChanged()
+    End Sub
+    Partial Private Sub Onmanager_idChanging(value As String)
+    End Sub
+    Partial Private Sub Onmanager_idChanged()
     End Sub
     #End Region
 	
 	Public Sub New()
 		MyBase.New
 		Me._projects = New EntitySet(Of project)(AddressOf Me.attach_projects, AddressOf Me.detach_projects)
-		Me._timesheets = New EntitySet(Of timesheet)(AddressOf Me.attach_timesheets, AddressOf Me.detach_timesheets)
+		Me._timesheet = CType(Nothing, EntityRef(Of timesheet))
 		OnCreated
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_id", DbType:="NVarChar(1) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_id", DbType:="NVarChar(255) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
 	Public Property id() As String
 		Get
 			Return Me._id
@@ -185,7 +191,7 @@ Partial Public Class account
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_f_name", DbType:="NVarChar(1)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_f_name", DbType:="NVarChar(255)")>  _
 	Public Property f_name() As String
 		Get
 			Return Me._f_name
@@ -201,7 +207,7 @@ Partial Public Class account
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_l_name", DbType:="NVarChar(1)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_l_name", DbType:="NVarChar(255)")>  _
 	Public Property l_name() As String
 		Get
 			Return Me._l_name
@@ -217,7 +223,7 @@ Partial Public Class account
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_email", DbType:="NVarChar(1)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_email", DbType:="NVarChar(255)")>  _
 	Public Property email() As String
 		Get
 			Return Me._email
@@ -233,7 +239,7 @@ Partial Public Class account
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_password", DbType:="NVarChar(1)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_password", DbType:="NVarChar(255)")>  _
 	Public Property password() As String
 		Get
 			Return Me._password
@@ -249,13 +255,13 @@ Partial Public Class account
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_status_manager", DbType:="TinyInt")>  _
-	Public Property status_manager() As System.Nullable(Of Byte)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_status_manager", DbType:="NVarChar(255)")>  _
+	Public Property status_manager() As String
 		Get
 			Return Me._status_manager
 		End Get
 		Set
-			If (Me._status_manager.Equals(value) = false) Then
+			If (String.Equals(Me._status_manager, value) = false) Then
 				Me.Onstatus_managerChanging(value)
 				Me.SendPropertyChanging
 				Me._status_manager = value
@@ -265,7 +271,23 @@ Partial Public Class account
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="account_project", Storage:="_projects", ThisKey:="id", OtherKey:="manager_id")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_manager_id", DbType:="NVarChar(255)")>  _
+	Public Property manager_id() As String
+		Get
+			Return Me._manager_id
+		End Get
+		Set
+			If (String.Equals(Me._manager_id, value) = false) Then
+				Me.Onmanager_idChanging(value)
+				Me.SendPropertyChanging
+				Me._manager_id = value
+				Me.SendPropertyChanged("manager_id")
+				Me.Onmanager_idChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="account_project", Storage:="_projects", ThisKey:="manager_id", OtherKey:="manager_id")>  _
 	Public Property projects() As EntitySet(Of project)
 		Get
 			Return Me._projects
@@ -275,13 +297,27 @@ Partial Public Class account
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="account_timesheet", Storage:="_timesheets", ThisKey:="id", OtherKey:="employee_id")>  _
-	Public Property timesheets() As EntitySet(Of timesheet)
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="account_timesheet", Storage:="_timesheet", ThisKey:="id", OtherKey:="employee_id", IsUnique:=true, IsForeignKey:=false)>  _
+	Public Property timesheet() As timesheet
 		Get
-			Return Me._timesheets
+			Return Me._timesheet.Entity
 		End Get
 		Set
-			Me._timesheets.Assign(value)
+			Dim previousValue As timesheet = Me._timesheet.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._timesheet.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._timesheet.Entity = Nothing
+					previousValue.account = Nothing
+				End If
+				Me._timesheet.Entity = value
+				If (Object.Equals(value, Nothing) = false) Then
+					value.account = Me
+				End If
+				Me.SendPropertyChanged("timesheet")
+			End If
 		End Set
 	End Property
 	
@@ -312,16 +348,6 @@ Partial Public Class account
 		Me.SendPropertyChanging
 		entity.account = Nothing
 	End Sub
-	
-	Private Sub attach_timesheets(ByVal entity As timesheet)
-		Me.SendPropertyChanging
-		entity.account = Me
-	End Sub
-	
-	Private Sub detach_timesheets(ByVal entity As timesheet)
-		Me.SendPropertyChanging
-		entity.account = Nothing
-	End Sub
 End Class
 
 <Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.activity")>  _
@@ -334,11 +360,11 @@ Partial Public Class activity
 	
 	Private _project_id As String
 	
-	Private _employee_id As String
-	
-	Private _timesheets As EntitySet(Of timesheet)
+	Private _activity_id As String
 	
 	Private _project As EntityRef(Of project)
+	
+	Private _timesheet As EntityRef(Of timesheet)
 	
     #Region "Extensibility Method Definitions"
     Partial Private Sub OnLoaded()
@@ -355,20 +381,20 @@ Partial Public Class activity
     End Sub
     Partial Private Sub Onproject_idChanged()
     End Sub
-    Partial Private Sub Onemployee_idChanging(value As String)
+    Partial Private Sub Onactivity_idChanging(value As String)
     End Sub
-    Partial Private Sub Onemployee_idChanged()
+    Partial Private Sub Onactivity_idChanged()
     End Sub
     #End Region
 	
 	Public Sub New()
 		MyBase.New
-		Me._timesheets = New EntitySet(Of timesheet)(AddressOf Me.attach_timesheets, AddressOf Me.detach_timesheets)
 		Me._project = CType(Nothing, EntityRef(Of project))
+		Me._timesheet = CType(Nothing, EntityRef(Of timesheet))
 		OnCreated
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_id", DbType:="NVarChar(1) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_id", DbType:="NVarChar(255) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
 	Public Property id() As String
 		Get
 			Return Me._id
@@ -384,7 +410,7 @@ Partial Public Class activity
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_project_id", DbType:="NVarChar(1)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_project_id", DbType:="NVarChar(255)")>  _
 	Public Property project_id() As String
 		Get
 			Return Me._project_id
@@ -403,33 +429,26 @@ Partial Public Class activity
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_employee_id", DbType:="NVarChar(1)")>  _
-	Public Property employee_id() As String
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_activity_id", DbType:="NVarChar(255)")>  _
+	Public Property activity_id() As String
 		Get
-			Return Me._employee_id
+			Return Me._activity_id
 		End Get
 		Set
-			If (String.Equals(Me._employee_id, value) = false) Then
-				Me.Onemployee_idChanging(value)
+			If (String.Equals(Me._activity_id, value) = false) Then
+				If Me._timesheet.HasLoadedOrAssignedValue Then
+					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
+				End If
+				Me.Onactivity_idChanging(value)
 				Me.SendPropertyChanging
-				Me._employee_id = value
-				Me.SendPropertyChanged("employee_id")
-				Me.Onemployee_idChanged
+				Me._activity_id = value
+				Me.SendPropertyChanged("activity_id")
+				Me.Onactivity_idChanged
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="activity_timesheet", Storage:="_timesheets", ThisKey:="id", OtherKey:="activity_id")>  _
-	Public Property timesheets() As EntitySet(Of timesheet)
-		Get
-			Return Me._timesheets
-		End Get
-		Set
-			Me._timesheets.Assign(value)
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="project_activity", Storage:="_project", ThisKey:="project_id", OtherKey:="id", IsForeignKey:=true)>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="project_activity", Storage:="_project", ThisKey:="project_id", OtherKey:="project_code", IsForeignKey:=true)>  _
 	Public Property project() As project
 		Get
 			Return Me._project.Entity
@@ -448,11 +467,39 @@ Partial Public Class activity
 				If ((value Is Nothing)  _
 							= false) Then
 					value.activities.Add(Me)
-					Me._project_id = value.id
+					Me._project_id = value.project_code
 				Else
 					Me._project_id = CType(Nothing, String)
 				End If
 				Me.SendPropertyChanged("project")
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="timesheet_activity", Storage:="_timesheet", ThisKey:="activity_id", OtherKey:="activity_id", IsForeignKey:=true)>  _
+	Public Property timesheet() As timesheet
+		Get
+			Return Me._timesheet.Entity
+		End Get
+		Set
+			Dim previousValue As timesheet = Me._timesheet.Entity
+			If ((Object.Equals(previousValue, value) = false)  _
+						OrElse (Me._timesheet.HasLoadedOrAssignedValue = false)) Then
+				Me.SendPropertyChanging
+				If ((previousValue Is Nothing)  _
+							= false) Then
+					Me._timesheet.Entity = Nothing
+					previousValue.activities.Remove(Me)
+				End If
+				Me._timesheet.Entity = value
+				If ((value Is Nothing)  _
+							= false) Then
+					value.activities.Add(Me)
+					Me._activity_id = value.activity_id
+				Else
+					Me._activity_id = CType(Nothing, String)
+				End If
+				Me.SendPropertyChanged("timesheet")
 			End If
 		End Set
 	End Property
@@ -473,16 +520,6 @@ Partial Public Class activity
 					= false) Then
 			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
 		End If
-	End Sub
-	
-	Private Sub attach_timesheets(ByVal entity As timesheet)
-		Me.SendPropertyChanging
-		entity.activity = Me
-	End Sub
-	
-	Private Sub detach_timesheets(ByVal entity As timesheet)
-		Me.SendPropertyChanging
-		entity.activity = Nothing
 	End Sub
 End Class
 
@@ -548,7 +585,7 @@ Partial Public Class project
 		OnCreated
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_id", DbType:="NVarChar(1) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_id", DbType:="NVarChar(255) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
 	Public Property id() As String
 		Get
 			Return Me._id
@@ -564,7 +601,7 @@ Partial Public Class project
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_project_code", DbType:="NVarChar(1)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_project_code", DbType:="NVarChar(255)")>  _
 	Public Property project_code() As String
 		Get
 			Return Me._project_code
@@ -580,7 +617,7 @@ Partial Public Class project
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_name", DbType:="NVarChar(1)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_name", DbType:="NVarChar(255)")>  _
 	Public Property name() As String
 		Get
 			Return Me._name
@@ -596,7 +633,7 @@ Partial Public Class project
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_manager_id", DbType:="NVarChar(1)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_manager_id", DbType:="NVarChar(255)")>  _
 	Public Property manager_id() As String
 		Get
 			Return Me._manager_id
@@ -647,7 +684,7 @@ Partial Public Class project
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="project_activity", Storage:="_activities", ThisKey:="id", OtherKey:="project_id")>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="project_activity", Storage:="_activities", ThisKey:="project_code", OtherKey:="project_id")>  _
 	Public Property activities() As EntitySet(Of activity)
 		Get
 			Return Me._activities
@@ -657,7 +694,7 @@ Partial Public Class project
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="account_project", Storage:="_account", ThisKey:="manager_id", OtherKey:="id", IsForeignKey:=true)>  _
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="account_project", Storage:="_account", ThisKey:="manager_id", OtherKey:="manager_id", IsForeignKey:=true)>  _
 	Public Property account() As account
 		Get
 			Return Me._account.Entity
@@ -676,7 +713,7 @@ Partial Public Class project
 				If ((value Is Nothing)  _
 							= false) Then
 					value.projects.Add(Me)
-					Me._manager_id = value.id
+					Me._manager_id = value.manager_id
 				Else
 					Me._manager_id = CType(Nothing, String)
 				End If
@@ -720,8 +757,6 @@ Partial Public Class timesheet
 	
 	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
 	
-	Private _id As String
-	
 	Private _employee_id As String
 	
 	Private _time_from As System.Nullable(Of Date)
@@ -732,7 +767,7 @@ Partial Public Class timesheet
 	
 	Private _activity_id As String
 	
-	Private _activity As EntityRef(Of activity)
+	Private _activities As EntitySet(Of activity)
 	
 	Private _account As EntityRef(Of account)
 	
@@ -742,10 +777,6 @@ Partial Public Class timesheet
     Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
     End Sub
     Partial Private Sub OnCreated()
-    End Sub
-    Partial Private Sub OnidChanging(value As String)
-    End Sub
-    Partial Private Sub OnidChanged()
     End Sub
     Partial Private Sub Onemployee_idChanging(value As String)
     End Sub
@@ -771,28 +802,12 @@ Partial Public Class timesheet
 	
 	Public Sub New()
 		MyBase.New
-		Me._activity = CType(Nothing, EntityRef(Of activity))
+		Me._activities = New EntitySet(Of activity)(AddressOf Me.attach_activities, AddressOf Me.detach_activities)
 		Me._account = CType(Nothing, EntityRef(Of account))
 		OnCreated
 	End Sub
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_id", DbType:="NVarChar(1) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
-	Public Property id() As String
-		Get
-			Return Me._id
-		End Get
-		Set
-			If (String.Equals(Me._id, value) = false) Then
-				Me.OnidChanging(value)
-				Me.SendPropertyChanging
-				Me._id = value
-				Me.SendPropertyChanged("id")
-				Me.OnidChanged
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_employee_id", DbType:="NVarChar(1)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_employee_id", DbType:="NVarChar(255) NOT NULL", CanBeNull:=false, IsPrimaryKey:=true)>  _
 	Public Property employee_id() As String
 		Get
 			Return Me._employee_id
@@ -843,7 +858,7 @@ Partial Public Class timesheet
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_comment", DbType:="NVarChar(1)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_comment", DbType:="NVarChar(255)")>  _
 	Public Property comment() As String
 		Get
 			Return Me._comment
@@ -859,16 +874,13 @@ Partial Public Class timesheet
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_activity_id", DbType:="NVarChar(1)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_activity_id", DbType:="NVarChar(255)")>  _
 	Public Property activity_id() As String
 		Get
 			Return Me._activity_id
 		End Get
 		Set
 			If (String.Equals(Me._activity_id, value) = false) Then
-				If Me._activity.HasLoadedOrAssignedValue Then
-					Throw New System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException()
-				End If
 				Me.Onactivity_idChanging(value)
 				Me.SendPropertyChanging
 				Me._activity_id = value
@@ -878,31 +890,13 @@ Partial Public Class timesheet
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="activity_timesheet", Storage:="_activity", ThisKey:="activity_id", OtherKey:="id", IsForeignKey:=true)>  _
-	Public Property activity() As activity
+	<Global.System.Data.Linq.Mapping.AssociationAttribute(Name:="timesheet_activity", Storage:="_activities", ThisKey:="activity_id", OtherKey:="activity_id")>  _
+	Public Property activities() As EntitySet(Of activity)
 		Get
-			Return Me._activity.Entity
+			Return Me._activities
 		End Get
 		Set
-			Dim previousValue As activity = Me._activity.Entity
-			If ((Object.Equals(previousValue, value) = false)  _
-						OrElse (Me._activity.HasLoadedOrAssignedValue = false)) Then
-				Me.SendPropertyChanging
-				If ((previousValue Is Nothing)  _
-							= false) Then
-					Me._activity.Entity = Nothing
-					previousValue.timesheets.Remove(Me)
-				End If
-				Me._activity.Entity = value
-				If ((value Is Nothing)  _
-							= false) Then
-					value.timesheets.Add(Me)
-					Me._activity_id = value.id
-				Else
-					Me._activity_id = CType(Nothing, String)
-				End If
-				Me.SendPropertyChanged("activity")
-			End If
+			Me._activities.Assign(value)
 		End Set
 	End Property
 	
@@ -919,12 +913,12 @@ Partial Public Class timesheet
 				If ((previousValue Is Nothing)  _
 							= false) Then
 					Me._account.Entity = Nothing
-					previousValue.timesheets.Remove(Me)
+					previousValue.timesheet = Nothing
 				End If
 				Me._account.Entity = value
 				If ((value Is Nothing)  _
 							= false) Then
-					value.timesheets.Add(Me)
+					value.timesheet = Me
 					Me._employee_id = value.id
 				Else
 					Me._employee_id = CType(Nothing, String)
@@ -950,5 +944,15 @@ Partial Public Class timesheet
 					= false) Then
 			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
 		End If
+	End Sub
+	
+	Private Sub attach_activities(ByVal entity As activity)
+		Me.SendPropertyChanging
+		entity.timesheet = Me
+	End Sub
+	
+	Private Sub detach_activities(ByVal entity As activity)
+		Me.SendPropertyChanging
+		entity.timesheet = Nothing
 	End Sub
 End Class
