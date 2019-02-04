@@ -33,6 +33,7 @@ Partial Class Form1
         '
         'txtusername
         '
+        Me.txtusername.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.txtusername.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtusername.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.txtusername.ForeColor = System.Drawing.Color.Black
@@ -52,6 +53,7 @@ Partial Class Form1
         '
         'txtPassword
         '
+        Me.txtPassword.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtPassword.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.txtPassword.ForeColor = System.Drawing.Color.DimGray
