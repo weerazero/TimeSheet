@@ -74,3 +74,17 @@ C:\Users\58121098-6\Desktop\TimeSheet\Project\obj\Debug\Project.exe
 C:\Users\58121098-6\Desktop\TimeSheet\Project\obj\Debug\Project.xml
 C:\Users\58121098-6\Desktop\TimeSheet\Project\obj\Debug\Project.pdb
 C:\Users\58121098-6\Desktop\TimeSheet\Project\obj\Debug\Project.vbprojAssemblyReference.cache
+C:\Users\admin\Desktop\TimeSheet\Project\bin\Debug\Project.exe.config
+C:\Users\admin\Desktop\TimeSheet\Project\bin\Debug\Project.exe
+C:\Users\admin\Desktop\TimeSheet\Project\bin\Debug\Project.pdb
+C:\Users\admin\Desktop\TimeSheet\Project\bin\Debug\Project.xml
+C:\Users\admin\Desktop\TimeSheet\Project\obj\Debug\Project.Form1.resources
+C:\Users\admin\Desktop\TimeSheet\Project\obj\Debug\Project.Form2.resources
+C:\Users\admin\Desktop\TimeSheet\Project\obj\Debug\Project.Resources.resources
+C:\Users\admin\Desktop\TimeSheet\Project\obj\Debug\Project.UserControl1.resources
+C:\Users\admin\Desktop\TimeSheet\Project\obj\Debug\Project.UserControl2.resources
+C:\Users\admin\Desktop\TimeSheet\Project\obj\Debug\Project.vbproj.GenerateResource.Cache
+C:\Users\admin\Desktop\TimeSheet\Project\obj\Debug\Project.exe
+C:\Users\admin\Desktop\TimeSheet\Project\obj\Debug\Project.xml
+C:\Users\admin\Desktop\TimeSheet\Project\obj\Debug\Project.pdb
+C:\Users\admin\Desktop\TimeSheet\Project\obj\Debug\Project.vbprojResolveAssemblyReference.cache

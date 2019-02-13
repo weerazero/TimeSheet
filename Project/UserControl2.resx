@@ -117,4 +117,48 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="BunifuFormFadeTransition1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="projectnamebox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="menegerbox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="BunifuDatepicker1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="BunifuDatepicker2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="BunifuCustomLabel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="BunifuCustomLabel2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="BunifuCustomLabel3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnSubmit.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAToAAAArCAYAAADov0TWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJKSURBVHhe7d1NaxNRFIBhf7Om2tiAOmmbVPxAxZa2CBYU
+        pN2UbEo3gliEgIJCwY2IiIUWspg0aZM7Lo5z7pSSIcdumzm8i2c1cye7l5m5Yc6NNE0FADwjdADcI3QA
+        3CN0ANwjdADcI3QA3Ls6dL2eDLoHMtpak/DyoWQrDcnu3wSA65f3SLs0fvVchp8+SP/k2O5Y7r+hO/36
+        WbL2gmTLdftHAGBWLM1L1rorw4/vzZ5NhU6rOHqzERcF64IAMKtadRmvP5H06E+pa6XQaeTC4weSJXP2
+        RQBgxukNmnas//uXHbp4J0fkADig7++mQhffyeWPq9YCAKiav0vzcra3OxG6Xi9uPPBODoAnIe9a/+eP
+        InS6NRt3LYwTAaCqQnJLzjvbRej0fyjWSQBQdeFpswhdeHTPPAEAKi+pXYRu8Y59AgA4EENnHQAALwgd
+        APcIHQD3CB0A9wgdAPcIHQD3CB0A9wgdAPcIHQD3CB0A94rQJTXzIAB4UISO6V4AHIuh02ESfHQTgEf6
+        daYYuuF+R7LF2+ZJAFBlo7ebReh0Wg7zIgC406rL4Eu3CJ066+zwOXUAfiQ1Gb9eLU8B0wE54UXbXgAA
+        FRJnu6404qzqcuhyOi1HD1oLAaAK4sZquyGDw2+XbSuFTp1+P4xTrkOTzQkAFdOcizdrk5FTU6GL8sfY
+        8913krUW4mL+egJg5i3XZbz57PJxdZIdugtaRd2a1QuYFwaAa6bDvUZbazLoHpgdU1eGDgA8IHQA3CN0
+        ANwjdADcI3QAnEvlH9era970tYIAAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

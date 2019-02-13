@@ -6,6 +6,7 @@
         Me.Close()
         Form1.Show()
 
+
     End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
@@ -21,7 +22,7 @@
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        UserControl21.Hide()
     End Sub
     Private Sub Form2_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseDown, BunifuGradientPanel2.MouseDown
         drag = True
@@ -39,6 +40,21 @@
     End Sub
 
     Private Sub BunifuGradientPanel2_Paint(sender As Object, e As PaintEventArgs) Handles BunifuGradientPanel2.Paint
+
+    End Sub
+
+    Private Sub UserControl22_Load(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub BunifuFlatButton4_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton4.Click
+        UserControl21.Show()
+        UserControl21.BringToFront()
+
+
+    End Sub
+
+    Private Sub UserControl21_Load(sender As Object, e As EventArgs)
 
     End Sub
 End Class

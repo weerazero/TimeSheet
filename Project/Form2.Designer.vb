@@ -30,8 +30,7 @@ Partial Class Form2
         Me.BunifuFlatButton2 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuGradientPanel2 = New Bunifu.Framework.UI.BunifuGradientPanel()
-        Me.DoubleBitmapControl1 = New BunifuAnimatorNS.DoubleBitmapControl()
-        Me.UserControl21 = New project.UserControl2()
+        Me.UserControl21 = New UserControl2()
         CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BunifuGradientPanel1.SuspendLayout()
         Me.BunifuGradientPanel2.SuspendLayout()
@@ -65,7 +64,7 @@ Partial Class Form2
         Me.BunifuGradientPanel1.Location = New System.Drawing.Point(0, 28)
         Me.BunifuGradientPanel1.Name = "BunifuGradientPanel1"
         Me.BunifuGradientPanel1.Quality = 10
-        Me.BunifuGradientPanel1.Size = New System.Drawing.Size(316, 664)
+        Me.BunifuGradientPanel1.Size = New System.Drawing.Size(316, 693)
         Me.BunifuGradientPanel1.TabIndex = 2
         '
         'BunifuFlatButton4
@@ -74,7 +73,7 @@ Partial Class Form2
         Me.BunifuFlatButton4.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.BunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuFlatButton4.BorderRadius = 0
-        Me.BunifuFlatButton4.ButtonText = "BunifuFlatButton4"
+        Me.BunifuFlatButton4.ButtonText = "Create Project"
         Me.BunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray
         Me.BunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent
@@ -97,7 +96,7 @@ Partial Class Form2
         Me.BunifuFlatButton4.selected = False
         Me.BunifuFlatButton4.Size = New System.Drawing.Size(316, 70)
         Me.BunifuFlatButton4.TabIndex = 11
-        Me.BunifuFlatButton4.Text = "BunifuFlatButton4"
+        Me.BunifuFlatButton4.Text = "Create Project"
         Me.BunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BunifuFlatButton4.Textcolor = System.Drawing.Color.White
         Me.BunifuFlatButton4.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -176,7 +175,7 @@ Partial Class Form2
         Me.BunifuFlatButton1.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.BunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuFlatButton1.BorderRadius = 0
-        Me.BunifuFlatButton1.ButtonText = "BunifuFlatButton1"
+        Me.BunifuFlatButton1.ButtonText = "QWE"
         Me.BunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray
         Me.BunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent
@@ -199,7 +198,7 @@ Partial Class Form2
         Me.BunifuFlatButton1.selected = False
         Me.BunifuFlatButton1.Size = New System.Drawing.Size(316, 70)
         Me.BunifuFlatButton1.TabIndex = 8
-        Me.BunifuFlatButton1.Text = "BunifuFlatButton1"
+        Me.BunifuFlatButton1.Text = "QWE"
         Me.BunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.White
         Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -219,21 +218,12 @@ Partial Class Form2
         Me.BunifuGradientPanel2.Size = New System.Drawing.Size(1286, 35)
         Me.BunifuGradientPanel2.TabIndex = 6
         '
-        'DoubleBitmapControl1
-        '
-        Me.DoubleBitmapControl1.Location = New System.Drawing.Point(943, 563)
-        Me.DoubleBitmapControl1.Name = "DoubleBitmapControl1"
-        Me.DoubleBitmapControl1.Size = New System.Drawing.Size(75, 23)
-        Me.DoubleBitmapControl1.TabIndex = 7
-        Me.DoubleBitmapControl1.Text = "DoubleBitmapControl1"
-        Me.DoubleBitmapControl1.Visible = False
-        '
         'UserControl21
         '
-        Me.UserControl21.Location = New System.Drawing.Point(415, 106)
+        Me.UserControl21.Location = New System.Drawing.Point(336, 52)
         Me.UserControl21.Name = "UserControl21"
-        Me.UserControl21.Size = New System.Drawing.Size(705, 393)
-        Me.UserControl21.TabIndex = 8
+        Me.UserControl21.Size = New System.Drawing.Size(932, 656)
+        Me.UserControl21.TabIndex = 7
         '
         'Form2
         '
@@ -242,7 +232,6 @@ Partial Class Form2
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(246, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1280, 720)
         Me.Controls.Add(Me.UserControl21)
-        Me.Controls.Add(Me.DoubleBitmapControl1)
         Me.Controls.Add(Me.BunifuGradientPanel2)
         Me.Controls.Add(Me.BunifuGradientPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -262,6 +251,5 @@ Partial Class Form2
     Friend WithEvents BunifuFlatButton3 As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents BunifuFlatButton2 As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents BunifuFlatButton1 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents DoubleBitmapControl1 As BunifuAnimatorNS.DoubleBitmapControl
     Friend WithEvents UserControl21 As UserControl2
 End Class
