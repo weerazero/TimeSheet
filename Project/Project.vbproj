@@ -86,12 +86,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="Login\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
+    <Compile Include="Login\Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="timetracker\container\Time_block_UC.Designer.vb">
+      <DependentUpon>Time_block_UC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="timetracker\container\Time_block_UC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="timetracker\container\time_container_UC.Designer.vb">
+      <DependentUpon>time_container_UC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="timetracker\container\time_container_UC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="timetracker\container\ListProj_UC.Designer.vb">
+      <DependentUpon>ListProj_UC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="timetracker\container\ListProj_UC.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Form2.Designer.vb">
       <DependentUpon>Form2.vb</DependentUpon>
@@ -114,12 +132,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="UserControl1.Designer.vb">
-      <DependentUpon>UserControl1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl1.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="UserControl2.Designer.vb">
       <DependentUpon>UserControl2.vb</DependentUpon>
     </Compile>
@@ -128,8 +140,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Login\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="timetracker\container\Time_block_UC.resx">
+      <DependentUpon>Time_block_UC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="timetracker\container\ListProj_UC.resx">
+      <DependentUpon>ListProj_UC.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
@@ -140,8 +158,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.vb</DependentUpon>
+    <EmbeddedResource Include="timetracker\container\time_container_UC.resx">
+      <DependentUpon>time_container_UC.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl2.resx">
       <DependentUpon>UserControl2.vb</DependentUpon>

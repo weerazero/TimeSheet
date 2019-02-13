@@ -30,7 +30,7 @@ Partial Class Form2
         Me.BunifuFlatButton2 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuGradientPanel2 = New Bunifu.Framework.UI.BunifuGradientPanel()
-        Me.UserControl21 = New UserControl2()
+        Me.Time_container_UC1 = New time_container_UC()
         CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BunifuGradientPanel1.SuspendLayout()
         Me.BunifuGradientPanel2.SuspendLayout()
@@ -175,7 +175,7 @@ Partial Class Form2
         Me.BunifuFlatButton1.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.BunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuFlatButton1.BorderRadius = 0
-        Me.BunifuFlatButton1.ButtonText = "QWE"
+        Me.BunifuFlatButton1.ButtonText = "TIME TRACKER"
         Me.BunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray
         Me.BunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent
@@ -190,7 +190,7 @@ Partial Class Form2
         Me.BunifuFlatButton1.IconVisible = True
         Me.BunifuFlatButton1.IconZoom = 90.0R
         Me.BunifuFlatButton1.IsTab = False
-        Me.BunifuFlatButton1.Location = New System.Drawing.Point(0, 97)
+        Me.BunifuFlatButton1.Location = New System.Drawing.Point(-3, 98)
         Me.BunifuFlatButton1.Name = "BunifuFlatButton1"
         Me.BunifuFlatButton1.Normalcolor = System.Drawing.SystemColors.MenuHighlight
         Me.BunifuFlatButton1.OnHovercolor = System.Drawing.SystemColors.HotTrack
@@ -198,7 +198,7 @@ Partial Class Form2
         Me.BunifuFlatButton1.selected = False
         Me.BunifuFlatButton1.Size = New System.Drawing.Size(316, 70)
         Me.BunifuFlatButton1.TabIndex = 8
-        Me.BunifuFlatButton1.Text = "QWE"
+        Me.BunifuFlatButton1.Text = "TIME TRACKER"
         Me.BunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.White
         Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -218,12 +218,12 @@ Partial Class Form2
         Me.BunifuGradientPanel2.Size = New System.Drawing.Size(1286, 35)
         Me.BunifuGradientPanel2.TabIndex = 6
         '
-        'UserControl21
+        'Time_container_UC1
         '
-        Me.UserControl21.Location = New System.Drawing.Point(336, 52)
-        Me.UserControl21.Name = "UserControl21"
-        Me.UserControl21.Size = New System.Drawing.Size(932, 656)
-        Me.UserControl21.TabIndex = 7
+        Me.Time_container_UC1.Location = New System.Drawing.Point(325, 132)
+        Me.Time_container_UC1.Name = "Time_container_UC1"
+        Me.Time_container_UC1.Size = New System.Drawing.Size(946, 582)
+        Me.Time_container_UC1.TabIndex = 7
         '
         'Form2
         '
@@ -231,7 +231,7 @@ Partial Class Form2
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(246, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1280, 720)
-        Me.Controls.Add(Me.UserControl21)
+        Me.Controls.Add(Me.Time_container_UC1)
         Me.Controls.Add(Me.BunifuGradientPanel2)
         Me.Controls.Add(Me.BunifuGradientPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -251,5 +251,5 @@ Partial Class Form2
     Friend WithEvents BunifuFlatButton3 As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents BunifuFlatButton2 As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents BunifuFlatButton1 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents UserControl21 As UserControl2
+    Friend WithEvents Time_container_UC1 As time_container_UC
 End Class
