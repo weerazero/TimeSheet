@@ -23,7 +23,7 @@ Partial Class time_container_UC
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Time_block_UC1 = New time_block_UC()
+        Me.Time_block_UC1 = New project.time_block_UC()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
