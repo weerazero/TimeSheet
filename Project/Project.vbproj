@@ -80,12 +80,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="checkAuth.vb" />
+    <Compile Include="Functions\checkAuth.vb" />
     <Compile Include="DataClasses.designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Functions\getProjectList.vb" />
     <Compile Include="Login\Form1.vb">
       <SubType>Form</SubType>
     </Compile>

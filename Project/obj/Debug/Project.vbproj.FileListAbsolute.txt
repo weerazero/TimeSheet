@@ -90,7 +90,6 @@ E:\github\TimeSheet2\Project\obj\Debug\Project.exe
 E:\github\TimeSheet2\Project\obj\Debug\Project.xml
 E:\github\TimeSheet2\Project\obj\Debug\Project.pdb
 E:\github\TimeSheet2\Project\obj\Debug\Project.vbprojResolveAssemblyReference.cache
-D:\git\TimeSheet\Project\obj\Debug\Project.vbprojResolveAssemblyReference.cache
 D:\git\TimeSheet\Project\bin\Debug\Project.exe.config
 D:\git\TimeSheet\Project\bin\Debug\Project.exe
 D:\git\TimeSheet\Project\bin\Debug\Project.pdb
