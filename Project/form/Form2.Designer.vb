@@ -25,12 +25,17 @@ Partial Class Form2
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
         Me.BunifuImageButton1 = New Bunifu.Framework.UI.BunifuImageButton()
         Me.BunifuGradientPanel1 = New Bunifu.Framework.UI.BunifuGradientPanel()
+        Me.BunifuFlatButton6 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.BunifuFlatButton5 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton4 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuFlatButton3 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton2 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuGradientPanel2 = New Bunifu.Framework.UI.BunifuGradientPanel()
         Me.Time_container_UC1 = New time_container_UC()
+        Me.UserControl21 = New UserControl2()
+        Me.Edit1 = New Edit()
+        Me.Delete1 = New Delete()
+        Me.Data1 = New data()
         CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BunifuGradientPanel1.SuspendLayout()
         Me.BunifuGradientPanel2.SuspendLayout()
@@ -53,8 +58,9 @@ Partial Class Form2
         '
         Me.BunifuGradientPanel1.BackgroundImage = CType(resources.GetObject("BunifuGradientPanel1.BackgroundImage"), System.Drawing.Image)
         Me.BunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BunifuGradientPanel1.Controls.Add(Me.BunifuFlatButton6)
+        Me.BunifuGradientPanel1.Controls.Add(Me.BunifuFlatButton5)
         Me.BunifuGradientPanel1.Controls.Add(Me.BunifuFlatButton4)
-        Me.BunifuGradientPanel1.Controls.Add(Me.BunifuFlatButton3)
         Me.BunifuGradientPanel1.Controls.Add(Me.BunifuFlatButton2)
         Me.BunifuGradientPanel1.Controls.Add(Me.BunifuFlatButton1)
         Me.BunifuGradientPanel1.GradientBottomLeft = System.Drawing.SystemColors.MenuHighlight
@@ -67,9 +73,77 @@ Partial Class Form2
         Me.BunifuGradientPanel1.Size = New System.Drawing.Size(316, 693)
         Me.BunifuGradientPanel1.TabIndex = 2
         '
+        'BunifuFlatButton6
+        '
+        Me.BunifuFlatButton6.Activecolor = System.Drawing.SystemColors.HotTrack
+        Me.BunifuFlatButton6.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.BunifuFlatButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BunifuFlatButton6.BorderRadius = 0
+        Me.BunifuFlatButton6.ButtonText = "Delete Project"
+        Me.BunifuFlatButton6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuFlatButton6.DisabledColor = System.Drawing.Color.Gray
+        Me.BunifuFlatButton6.Iconcolor = System.Drawing.Color.Transparent
+        Me.BunifuFlatButton6.Iconimage = CType(resources.GetObject("BunifuFlatButton6.Iconimage"), System.Drawing.Image)
+        Me.BunifuFlatButton6.Iconimage_right = Nothing
+        Me.BunifuFlatButton6.Iconimage_right_Selected = Nothing
+        Me.BunifuFlatButton6.Iconimage_Selected = Nothing
+        Me.BunifuFlatButton6.IconMarginLeft = 0
+        Me.BunifuFlatButton6.IconMarginRight = 0
+        Me.BunifuFlatButton6.IconRightVisible = True
+        Me.BunifuFlatButton6.IconRightZoom = 0R
+        Me.BunifuFlatButton6.IconVisible = True
+        Me.BunifuFlatButton6.IconZoom = 90.0R
+        Me.BunifuFlatButton6.IsTab = False
+        Me.BunifuFlatButton6.Location = New System.Drawing.Point(0, 367)
+        Me.BunifuFlatButton6.Name = "BunifuFlatButton6"
+        Me.BunifuFlatButton6.Normalcolor = System.Drawing.SystemColors.MenuHighlight
+        Me.BunifuFlatButton6.OnHovercolor = System.Drawing.SystemColors.HotTrack
+        Me.BunifuFlatButton6.OnHoverTextColor = System.Drawing.Color.DimGray
+        Me.BunifuFlatButton6.selected = False
+        Me.BunifuFlatButton6.Size = New System.Drawing.Size(316, 70)
+        Me.BunifuFlatButton6.TabIndex = 13
+        Me.BunifuFlatButton6.Text = "Delete Project"
+        Me.BunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BunifuFlatButton6.Textcolor = System.Drawing.Color.White
+        Me.BunifuFlatButton6.TextFont = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'BunifuFlatButton5
+        '
+        Me.BunifuFlatButton5.Activecolor = System.Drawing.SystemColors.HotTrack
+        Me.BunifuFlatButton5.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.BunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BunifuFlatButton5.BorderRadius = 0
+        Me.BunifuFlatButton5.ButtonText = "Edit Project"
+        Me.BunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuFlatButton5.DisabledColor = System.Drawing.Color.Gray
+        Me.BunifuFlatButton5.Iconcolor = System.Drawing.Color.Transparent
+        Me.BunifuFlatButton5.Iconimage = CType(resources.GetObject("BunifuFlatButton5.Iconimage"), System.Drawing.Image)
+        Me.BunifuFlatButton5.Iconimage_right = Nothing
+        Me.BunifuFlatButton5.Iconimage_right_Selected = Nothing
+        Me.BunifuFlatButton5.Iconimage_Selected = Nothing
+        Me.BunifuFlatButton5.IconMarginLeft = 0
+        Me.BunifuFlatButton5.IconMarginRight = 0
+        Me.BunifuFlatButton5.IconRightVisible = True
+        Me.BunifuFlatButton5.IconRightZoom = 0R
+        Me.BunifuFlatButton5.IconVisible = True
+        Me.BunifuFlatButton5.IconZoom = 90.0R
+        Me.BunifuFlatButton5.IsTab = False
+        Me.BunifuFlatButton5.Location = New System.Drawing.Point(0, 307)
+        Me.BunifuFlatButton5.Name = "BunifuFlatButton5"
+        Me.BunifuFlatButton5.Normalcolor = System.Drawing.SystemColors.MenuHighlight
+        Me.BunifuFlatButton5.OnHovercolor = System.Drawing.SystemColors.HotTrack
+        Me.BunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.DimGray
+        Me.BunifuFlatButton5.selected = False
+        Me.BunifuFlatButton5.Size = New System.Drawing.Size(316, 70)
+        Me.BunifuFlatButton5.TabIndex = 12
+        Me.BunifuFlatButton5.Text = "Edit Project"
+        Me.BunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BunifuFlatButton5.Textcolor = System.Drawing.Color.White
+        Me.BunifuFlatButton5.TextFont = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
         'BunifuFlatButton4
         '
-        Me.BunifuFlatButton4.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.BunifuFlatButton4.Activecolor = System.Drawing.SystemColors.HotTrack
         Me.BunifuFlatButton4.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.BunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuFlatButton4.BorderRadius = 0
@@ -88,7 +162,7 @@ Partial Class Form2
         Me.BunifuFlatButton4.IconVisible = True
         Me.BunifuFlatButton4.IconZoom = 90.0R
         Me.BunifuFlatButton4.IsTab = False
-        Me.BunifuFlatButton4.Location = New System.Drawing.Point(0, 297)
+        Me.BunifuFlatButton4.Location = New System.Drawing.Point(0, 240)
         Me.BunifuFlatButton4.Name = "BunifuFlatButton4"
         Me.BunifuFlatButton4.Normalcolor = System.Drawing.SystemColors.MenuHighlight
         Me.BunifuFlatButton4.OnHovercolor = System.Drawing.SystemColors.HotTrack
@@ -99,45 +173,11 @@ Partial Class Form2
         Me.BunifuFlatButton4.Text = "Create Project"
         Me.BunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BunifuFlatButton4.Textcolor = System.Drawing.Color.White
-        Me.BunifuFlatButton4.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'BunifuFlatButton3
-        '
-        Me.BunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.BunifuFlatButton3.BackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.BunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BunifuFlatButton3.BorderRadius = 0
-        Me.BunifuFlatButton3.ButtonText = "BunifuFlatButton3"
-        Me.BunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton3.Iconimage = CType(resources.GetObject("BunifuFlatButton3.Iconimage"), System.Drawing.Image)
-        Me.BunifuFlatButton3.Iconimage_right = Nothing
-        Me.BunifuFlatButton3.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton3.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton3.IconMarginLeft = 0
-        Me.BunifuFlatButton3.IconMarginRight = 0
-        Me.BunifuFlatButton3.IconRightVisible = True
-        Me.BunifuFlatButton3.IconRightZoom = 0R
-        Me.BunifuFlatButton3.IconVisible = True
-        Me.BunifuFlatButton3.IconZoom = 90.0R
-        Me.BunifuFlatButton3.IsTab = False
-        Me.BunifuFlatButton3.Location = New System.Drawing.Point(0, 231)
-        Me.BunifuFlatButton3.Name = "BunifuFlatButton3"
-        Me.BunifuFlatButton3.Normalcolor = System.Drawing.SystemColors.MenuHighlight
-        Me.BunifuFlatButton3.OnHovercolor = System.Drawing.SystemColors.HotTrack
-        Me.BunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.DimGray
-        Me.BunifuFlatButton3.selected = False
-        Me.BunifuFlatButton3.Size = New System.Drawing.Size(316, 70)
-        Me.BunifuFlatButton3.TabIndex = 10
-        Me.BunifuFlatButton3.Text = "BunifuFlatButton3"
-        Me.BunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BunifuFlatButton3.Textcolor = System.Drawing.Color.White
-        Me.BunifuFlatButton3.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuFlatButton4.TextFont = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'BunifuFlatButton2
         '
-        Me.BunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.BunifuFlatButton2.Activecolor = System.Drawing.SystemColors.HotTrack
         Me.BunifuFlatButton2.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.BunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuFlatButton2.BorderRadius = 0
@@ -167,11 +207,11 @@ Partial Class Form2
         Me.BunifuFlatButton2.Text = "BunifuFlatButton2"
         Me.BunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BunifuFlatButton2.Textcolor = System.Drawing.Color.White
-        Me.BunifuFlatButton2.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuFlatButton2.TextFont = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'BunifuFlatButton1
         '
-        Me.BunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(CType(CType(46, Byte), Integer), CType(CType(139, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.BunifuFlatButton1.Activecolor = System.Drawing.SystemColors.HotTrack
         Me.BunifuFlatButton1.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.BunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuFlatButton1.BorderRadius = 0
@@ -201,7 +241,7 @@ Partial Class Form2
         Me.BunifuFlatButton1.Text = "TIME TRACKER"
         Me.BunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.White
-        Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'BunifuGradientPanel2
         '
@@ -220,10 +260,38 @@ Partial Class Form2
         '
         'Time_container_UC1
         '
-        Me.Time_container_UC1.Location = New System.Drawing.Point(325, 132)
+        Me.Time_container_UC1.Location = New System.Drawing.Point(322, 39)
         Me.Time_container_UC1.Name = "Time_container_UC1"
-        Me.Time_container_UC1.Size = New System.Drawing.Size(946, 582)
+        Me.Time_container_UC1.Size = New System.Drawing.Size(946, 404)
         Me.Time_container_UC1.TabIndex = 7
+        '
+        'UserControl21
+        '
+        Me.UserControl21.Location = New System.Drawing.Point(358, 39)
+        Me.UserControl21.Name = "UserControl21"
+        Me.UserControl21.Size = New System.Drawing.Size(873, 628)
+        Me.UserControl21.TabIndex = 8
+        '
+        'Edit1
+        '
+        Me.Edit1.Location = New System.Drawing.Point(336, 39)
+        Me.Edit1.Name = "Edit1"
+        Me.Edit1.Size = New System.Drawing.Size(932, 656)
+        Me.Edit1.TabIndex = 12
+        '
+        'Delete1
+        '
+        Me.Delete1.Location = New System.Drawing.Point(322, 39)
+        Me.Delete1.Name = "Delete1"
+        Me.Delete1.Size = New System.Drawing.Size(952, 290)
+        Me.Delete1.TabIndex = 13
+        '
+        'Data1
+        '
+        Me.Data1.Location = New System.Drawing.Point(336, 34)
+        Me.Data1.Name = "Data1"
+        Me.Data1.Size = New System.Drawing.Size(932, 656)
+        Me.Data1.TabIndex = 14
         '
         'Form2
         '
@@ -231,6 +299,10 @@ Partial Class Form2
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(238, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(246, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1280, 720)
+        Me.Controls.Add(Me.Data1)
+        Me.Controls.Add(Me.Delete1)
+        Me.Controls.Add(Me.Edit1)
+        Me.Controls.Add(Me.UserControl21)
         Me.Controls.Add(Me.Time_container_UC1)
         Me.Controls.Add(Me.BunifuGradientPanel2)
         Me.Controls.Add(Me.BunifuGradientPanel1)
@@ -248,8 +320,13 @@ Partial Class Form2
     Friend WithEvents BunifuGradientPanel1 As Bunifu.Framework.UI.BunifuGradientPanel
     Friend WithEvents BunifuGradientPanel2 As Bunifu.Framework.UI.BunifuGradientPanel
     Friend WithEvents BunifuFlatButton4 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents BunifuFlatButton3 As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents BunifuFlatButton2 As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents BunifuFlatButton1 As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents Time_container_UC1 As time_container_UC
+    Friend WithEvents BunifuFlatButton6 As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents BunifuFlatButton5 As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents UserControl21 As UserControl2
+    Friend WithEvents Edit1 As Edit
+    Friend WithEvents Delete1 As Delete
+    Friend WithEvents Data1 As data
 End Class

@@ -33,7 +33,7 @@ Partial Class UserControl2
         Me.BunifuCustomLabel2 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuCustomLabel3 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.btnSubmit = New Bunifu.Framework.UI.BunifuThinButton2()
-        Me.VScrollBar1 = New System.Windows.Forms.VScrollBar()
+        Me.BunifuCustomLabel4 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.SuspendLayout()
         '
         'BunifuFormFadeTransition1
@@ -52,7 +52,7 @@ Partial Class UserControl2
         Me.projectnamebox.LineIdleColor = System.Drawing.Color.Gray
         Me.projectnamebox.LineMouseHoverColor = System.Drawing.Color.Tomato
         Me.projectnamebox.LineThickness = 3
-        Me.projectnamebox.Location = New System.Drawing.Point(97, 65)
+        Me.projectnamebox.Location = New System.Drawing.Point(302, 130)
         Me.projectnamebox.Margin = New System.Windows.Forms.Padding(4)
         Me.projectnamebox.Name = "projectnamebox"
         Me.projectnamebox.Size = New System.Drawing.Size(379, 42)
@@ -66,7 +66,7 @@ Partial Class UserControl2
         Me.menegerbox.DisabledColor = System.Drawing.Color.Gray
         Me.menegerbox.ForeColor = System.Drawing.Color.White
         Me.menegerbox.Items = New String() {"ertq", "qert", "yuik", "qert"}
-        Me.menegerbox.Location = New System.Drawing.Point(97, 165)
+        Me.menegerbox.Location = New System.Drawing.Point(302, 230)
         Me.menegerbox.Name = "menegerbox"
         Me.menegerbox.NomalColor = System.Drawing.Color.Salmon
         Me.menegerbox.onHoverColor = System.Drawing.Color.Tomato
@@ -81,7 +81,7 @@ Partial Class UserControl2
         Me.BunifuDatepicker1.ForeColor = System.Drawing.Color.White
         Me.BunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.BunifuDatepicker1.FormatCustom = Nothing
-        Me.BunifuDatepicker1.Location = New System.Drawing.Point(97, 355)
+        Me.BunifuDatepicker1.Location = New System.Drawing.Point(302, 420)
         Me.BunifuDatepicker1.Name = "BunifuDatepicker1"
         Me.BunifuDatepicker1.Size = New System.Drawing.Size(303, 36)
         Me.BunifuDatepicker1.TabIndex = 3
@@ -94,7 +94,7 @@ Partial Class UserControl2
         Me.BunifuDatepicker2.ForeColor = System.Drawing.Color.White
         Me.BunifuDatepicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.BunifuDatepicker2.FormatCustom = Nothing
-        Me.BunifuDatepicker2.Location = New System.Drawing.Point(97, 252)
+        Me.BunifuDatepicker2.Location = New System.Drawing.Point(302, 317)
         Me.BunifuDatepicker2.Name = "BunifuDatepicker2"
         Me.BunifuDatepicker2.Size = New System.Drawing.Size(303, 36)
         Me.BunifuDatepicker2.TabIndex = 4
@@ -104,7 +104,7 @@ Partial Class UserControl2
         '
         Me.BunifuCustomLabel1.AutoSize = True
         Me.BunifuCustomLabel1.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(93, 227)
+        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(298, 292)
         Me.BunifuCustomLabel1.Name = "BunifuCustomLabel1"
         Me.BunifuCustomLabel1.Size = New System.Drawing.Size(98, 22)
         Me.BunifuCustomLabel1.TabIndex = 5
@@ -114,7 +114,7 @@ Partial Class UserControl2
         '
         Me.BunifuCustomLabel2.AutoSize = True
         Me.BunifuCustomLabel2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel2.Location = New System.Drawing.Point(93, 330)
+        Me.BunifuCustomLabel2.Location = New System.Drawing.Point(298, 395)
         Me.BunifuCustomLabel2.Name = "BunifuCustomLabel2"
         Me.BunifuCustomLabel2.Size = New System.Drawing.Size(91, 22)
         Me.BunifuCustomLabel2.TabIndex = 6
@@ -124,7 +124,7 @@ Partial Class UserControl2
         '
         Me.BunifuCustomLabel3.AutoSize = True
         Me.BunifuCustomLabel3.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel3.Location = New System.Drawing.Point(93, 140)
+        Me.BunifuCustomLabel3.Location = New System.Drawing.Point(298, 205)
         Me.BunifuCustomLabel3.Name = "BunifuCustomLabel3"
         Me.BunifuCustomLabel3.Size = New System.Drawing.Size(112, 22)
         Me.BunifuCustomLabel3.TabIndex = 7
@@ -149,25 +149,28 @@ Partial Class UserControl2
         Me.btnSubmit.IdleFillColor = System.Drawing.Color.Salmon
         Me.btnSubmit.IdleForecolor = System.Drawing.Color.WhiteSmoke
         Me.btnSubmit.IdleLineColor = System.Drawing.Color.Salmon
-        Me.btnSubmit.Location = New System.Drawing.Point(97, 436)
+        Me.btnSubmit.Location = New System.Drawing.Point(302, 501)
         Me.btnSubmit.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(314, 43)
         Me.btnSubmit.TabIndex = 8
         Me.btnSubmit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'VScrollBar1
+        'BunifuCustomLabel4
         '
-        Me.VScrollBar1.Location = New System.Drawing.Point(892, 0)
-        Me.VScrollBar1.Name = "VScrollBar1"
-        Me.VScrollBar1.Size = New System.Drawing.Size(17, 656)
-        Me.VScrollBar1.TabIndex = 9
+        Me.BunifuCustomLabel4.AutoSize = True
+        Me.BunifuCustomLabel4.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuCustomLabel4.Location = New System.Drawing.Point(374, 48)
+        Me.BunifuCustomLabel4.Name = "BunifuCustomLabel4"
+        Me.BunifuCustomLabel4.Size = New System.Drawing.Size(204, 28)
+        Me.BunifuCustomLabel4.TabIndex = 20
+        Me.BunifuCustomLabel4.Text = "CREATE PROJECT"
         '
         'UserControl2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.VScrollBar1)
+        Me.Controls.Add(Me.BunifuCustomLabel4)
         Me.Controls.Add(Me.btnSubmit)
         Me.Controls.Add(Me.BunifuCustomLabel3)
         Me.Controls.Add(Me.BunifuCustomLabel2)
@@ -191,5 +194,5 @@ Partial Class UserControl2
     Friend WithEvents BunifuCustomLabel2 As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents BunifuCustomLabel3 As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents btnSubmit As Bunifu.Framework.UI.BunifuThinButton2
-    Friend WithEvents VScrollBar1 As VScrollBar
+    Friend WithEvents BunifuCustomLabel4 As Bunifu.Framework.UI.BunifuCustomLabel
 End Class

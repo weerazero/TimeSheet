@@ -81,10 +81,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="checkAuth.vb" />
+    <Compile Include="connect.vb" />
     <Compile Include="DataClasses.designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="usercon\Delete.Designer.vb">
+      <DependentUpon>Delete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="usercon\Delete.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercon\Edit.Designer.vb">
+      <DependentUpon>Edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="usercon\Edit.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Login\Form1.vb">
       <SubType>Form</SubType>
@@ -92,6 +105,12 @@
     <Compile Include="Login\Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="usercon\data.Designer.vb">
+      <DependentUpon>data.vb</DependentUpon>
+    </Compile>
+    <Compile Include="usercon\data.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="timetracker\container\Time_block_UC.Designer.vb">
       <DependentUpon>Time_block_UC.vb</DependentUpon>
@@ -111,10 +130,10 @@
     <Compile Include="timetracker\container\ListProj_UC.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.vb">
+    <Compile Include="form\Form2.Designer.vb">
       <DependentUpon>Form2.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form2.vb">
+    <Compile Include="form\Form2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -132,16 +151,25 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="UserControl2.Designer.vb">
+    <Compile Include="usercon\UserControl2.Designer.vb">
       <DependentUpon>UserControl2.vb</DependentUpon>
     </Compile>
-    <Compile Include="UserControl2.vb">
+    <Compile Include="usercon\UserControl2.vb">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="usercon\Delete.resx">
+      <DependentUpon>Delete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercon\Edit.resx">
+      <DependentUpon>Edit.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usercon\data.resx">
+      <DependentUpon>data.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="timetracker\container\Time_block_UC.resx">
       <DependentUpon>Time_block_UC.vb</DependentUpon>
@@ -149,7 +177,7 @@
     <EmbeddedResource Include="timetracker\container\ListProj_UC.resx">
       <DependentUpon>ListProj_UC.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
+    <EmbeddedResource Include="form\Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -161,7 +189,7 @@
     <EmbeddedResource Include="timetracker\container\time_container_UC.resx">
       <DependentUpon>time_container_UC.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl2.resx">
+    <EmbeddedResource Include="usercon\UserControl2.resx">
       <DependentUpon>UserControl2.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

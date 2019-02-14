@@ -28,10 +28,11 @@
         Dim strdate As Date = BunifuDatepicker1.Value
         Dim enddate As Date = BunifuDatepicker2.Value
 
+        Dim check = MessageBox.Show("ยืนยันการส้รางโปรเจค", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
 
     End Sub
     Dim i = 0
-    Private Sub VScrollBar1_Scroll(sender As Object, e As ScrollEventArgs) Handles VScrollBar1.Scroll
+    Private Sub VScrollBar1_Scroll(sender As Object, e As ScrollEventArgs)
         i += 10
         Me.AutoScrollPosition = New Point(0, i)
         Me.Text = Me.AutoScrollPosition.Y.ToString
