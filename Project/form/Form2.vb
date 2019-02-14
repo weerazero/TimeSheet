@@ -105,4 +105,8 @@
         Delete1.Hide()
         Time_container_UC1.Show()
     End Sub
+
+    Private Sub Data1_Load(sender As Object, e As EventArgs) Handles Data1.Load
+
+    End Sub
 End Class

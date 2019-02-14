@@ -27,8 +27,8 @@ Partial Class Edit
         Me.BunifuCustomLabel3 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuCustomLabel2 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuCustomLabel1 = New Bunifu.Framework.UI.BunifuCustomLabel()
-        Me.BunifuDatepicker2 = New Bunifu.Framework.UI.BunifuDatepicker()
-        Me.BunifuDatepicker1 = New Bunifu.Framework.UI.BunifuDatepicker()
+        Me.start = New Bunifu.Framework.UI.BunifuDatepicker()
+        Me.enddate = New Bunifu.Framework.UI.BunifuDatepicker()
         Me.projectid = New Bunifu.Framework.UI.BunifuDropdown()
         Me.projectnamebox = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.BunifuCustomLabel4 = New Bunifu.Framework.UI.BunifuCustomLabel()
@@ -92,31 +92,31 @@ Partial Class Edit
         Me.BunifuCustomLabel1.TabIndex = 13
         Me.BunifuCustomLabel1.Text = "StartDate"
         '
-        'BunifuDatepicker2
+        'start
         '
-        Me.BunifuDatepicker2.BackColor = System.Drawing.Color.Salmon
-        Me.BunifuDatepicker2.BorderRadius = 0
-        Me.BunifuDatepicker2.ForeColor = System.Drawing.Color.White
-        Me.BunifuDatepicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.BunifuDatepicker2.FormatCustom = Nothing
-        Me.BunifuDatepicker2.Location = New System.Drawing.Point(553, 143)
-        Me.BunifuDatepicker2.Name = "BunifuDatepicker2"
-        Me.BunifuDatepicker2.Size = New System.Drawing.Size(303, 36)
-        Me.BunifuDatepicker2.TabIndex = 12
-        Me.BunifuDatepicker2.Value = New Date(2019, 2, 13, 14, 12, 52, 949)
+        Me.start.BackColor = System.Drawing.Color.Salmon
+        Me.start.BorderRadius = 0
+        Me.start.ForeColor = System.Drawing.Color.White
+        Me.start.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.start.FormatCustom = Nothing
+        Me.start.Location = New System.Drawing.Point(553, 143)
+        Me.start.Name = "start"
+        Me.start.Size = New System.Drawing.Size(303, 36)
+        Me.start.TabIndex = 12
+        Me.start.Value = New Date(2019, 2, 13, 14, 12, 52, 949)
         '
-        'BunifuDatepicker1
+        'enddate
         '
-        Me.BunifuDatepicker1.BackColor = System.Drawing.Color.Salmon
-        Me.BunifuDatepicker1.BorderRadius = 0
-        Me.BunifuDatepicker1.ForeColor = System.Drawing.Color.White
-        Me.BunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.BunifuDatepicker1.FormatCustom = Nothing
-        Me.BunifuDatepicker1.Location = New System.Drawing.Point(553, 234)
-        Me.BunifuDatepicker1.Name = "BunifuDatepicker1"
-        Me.BunifuDatepicker1.Size = New System.Drawing.Size(303, 36)
-        Me.BunifuDatepicker1.TabIndex = 11
-        Me.BunifuDatepicker1.Value = New Date(2019, 2, 13, 14, 12, 52, 949)
+        Me.enddate.BackColor = System.Drawing.Color.Salmon
+        Me.enddate.BorderRadius = 0
+        Me.enddate.ForeColor = System.Drawing.Color.White
+        Me.enddate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.enddate.FormatCustom = Nothing
+        Me.enddate.Location = New System.Drawing.Point(553, 234)
+        Me.enddate.Name = "enddate"
+        Me.enddate.Size = New System.Drawing.Size(303, 36)
+        Me.enddate.TabIndex = 11
+        Me.enddate.Value = New Date(2019, 2, 13, 14, 12, 52, 949)
         '
         'projectid
         '
@@ -199,8 +199,8 @@ Partial Class Edit
         Me.Controls.Add(Me.BunifuCustomLabel3)
         Me.Controls.Add(Me.BunifuCustomLabel2)
         Me.Controls.Add(Me.BunifuCustomLabel1)
-        Me.Controls.Add(Me.BunifuDatepicker2)
-        Me.Controls.Add(Me.BunifuDatepicker1)
+        Me.Controls.Add(Me.start)
+        Me.Controls.Add(Me.enddate)
         Me.Controls.Add(Me.projectid)
         Me.Name = "Edit"
         Me.Size = New System.Drawing.Size(932, 656)
@@ -213,8 +213,8 @@ Partial Class Edit
     Friend WithEvents BunifuCustomLabel3 As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents BunifuCustomLabel2 As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents BunifuCustomLabel1 As Bunifu.Framework.UI.BunifuCustomLabel
-    Friend WithEvents BunifuDatepicker2 As Bunifu.Framework.UI.BunifuDatepicker
-    Friend WithEvents BunifuDatepicker1 As Bunifu.Framework.UI.BunifuDatepicker
+    Friend WithEvents start As Bunifu.Framework.UI.BunifuDatepicker
+    Friend WithEvents enddate As Bunifu.Framework.UI.BunifuDatepicker
     Friend WithEvents projectid As Bunifu.Framework.UI.BunifuDropdown
     Friend WithEvents projectnamebox As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents BunifuCustomLabel4 As Bunifu.Framework.UI.BunifuCustomLabel

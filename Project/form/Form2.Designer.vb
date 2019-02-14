@@ -181,7 +181,7 @@ Partial Class Form2
         Me.BunifuFlatButton2.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.BunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuFlatButton2.BorderRadius = 0
-        Me.BunifuFlatButton2.ButtonText = "BunifuFlatButton2"
+        Me.BunifuFlatButton2.ButtonText = "DashBorad"
         Me.BunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray
         Me.BunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent
@@ -204,7 +204,7 @@ Partial Class Form2
         Me.BunifuFlatButton2.selected = False
         Me.BunifuFlatButton2.Size = New System.Drawing.Size(316, 70)
         Me.BunifuFlatButton2.TabIndex = 9
-        Me.BunifuFlatButton2.Text = "BunifuFlatButton2"
+        Me.BunifuFlatButton2.Text = "DashBorad"
         Me.BunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BunifuFlatButton2.Textcolor = System.Drawing.Color.White
         Me.BunifuFlatButton2.TextFont = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
