@@ -60,7 +60,11 @@
         Edit1.Hide()
         Delete1.Hide()
         Time_container_UC1.Hide()
-
+        BunifuFlatButton4.Normalcolor = Color.RoyalBlue
+        BunifuFlatButton5.Normalcolor = Color.DodgerBlue
+        BunifuFlatButton6.Normalcolor = Color.DodgerBlue
+        BunifuFlatButton2.Normalcolor = Color.DodgerBlue
+        BunifuFlatButton1.Normalcolor = Color.DodgerBlue
     End Sub
 
     Private Sub UserControl21_Load(sender As Object, e As EventArgs)
@@ -77,6 +81,11 @@
         Delete1.Hide()
         Data1.Hide()
         Edit1.Show()
+        BunifuFlatButton4.Normalcolor = Color.DodgerBlue
+        BunifuFlatButton5.Normalcolor = Color.RoyalBlue
+        BunifuFlatButton6.Normalcolor = Color.DodgerBlue
+        BunifuFlatButton2.Normalcolor = Color.DodgerBlue
+        BunifuFlatButton1.Normalcolor = Color.DodgerBlue
     End Sub
 
     Private Sub BunifuFlatButton6_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton6.Click
@@ -86,6 +95,11 @@
         Data1.Hide()
         Edit1.Hide()
         Delete1.Show()
+        BunifuFlatButton2.Normalcolor = Color.DodgerBlue
+        BunifuFlatButton1.Normalcolor = Color.DodgerBlue
+        BunifuFlatButton4.Normalcolor = Color.DodgerBlue
+        BunifuFlatButton5.Normalcolor = Color.DodgerBlue
+        BunifuFlatButton6.Normalcolor = Color.RoyalBlue
     End Sub
 
     Private Sub BunifuFlatButton2_Click_1(sender As Object, e As EventArgs) Handles BunifuFlatButton2.Click
@@ -94,6 +108,11 @@
         Delete1.Hide()
         Time_container_UC1.Hide()
         Data1.Show()
+        BunifuFlatButton1.Normalcolor = Color.DodgerBlue
+        BunifuFlatButton4.Normalcolor = Color.DodgerBlue
+        BunifuFlatButton5.Normalcolor = Color.DodgerBlue
+        BunifuFlatButton6.Normalcolor = Color.DodgerBlue
+        BunifuFlatButton2.Normalcolor = Color.RoyalBlue
     End Sub
 
     Private Sub BunifuFlatButton1_Click_1(sender As Object, e As EventArgs) Handles BunifuFlatButton1.Click
@@ -104,6 +123,11 @@
         Edit1.Hide()
         Delete1.Hide()
         Time_container_UC1.Show()
+        BunifuFlatButton4.Normalcolor = Color.DodgerBlue
+        BunifuFlatButton5.Normalcolor = Color.DodgerBlue
+        BunifuFlatButton6.Normalcolor = Color.DodgerBlue
+        BunifuFlatButton2.Normalcolor = Color.DodgerBlue
+        BunifuFlatButton1.Normalcolor = Color.RoyalBlue
     End Sub
 
     Private Sub Data1_Load(sender As Object, e As EventArgs) Handles Data1.Load

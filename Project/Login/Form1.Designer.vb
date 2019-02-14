@@ -104,17 +104,17 @@ Partial Class Form1
         Me.BunifuTileButton1.color = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.BunifuTileButton1.colorActive = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.BunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuTileButton1.Font = New System.Drawing.Font("Century Gothic", 15.75!)
+        Me.BunifuTileButton1.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BunifuTileButton1.ForeColor = System.Drawing.Color.White
         Me.BunifuTileButton1.Image = Nothing
-        Me.BunifuTileButton1.ImagePosition = 60
+        Me.BunifuTileButton1.ImagePosition = 61
         Me.BunifuTileButton1.ImageZoom = 60
-        Me.BunifuTileButton1.LabelPosition = 41
+        Me.BunifuTileButton1.LabelPosition = 30
         Me.BunifuTileButton1.LabelText = "X"
-        Me.BunifuTileButton1.Location = New System.Drawing.Point(543, 15)
+        Me.BunifuTileButton1.Location = New System.Drawing.Point(543, 2)
         Me.BunifuTileButton1.Margin = New System.Windows.Forms.Padding(6)
         Me.BunifuTileButton1.Name = "BunifuTileButton1"
-        Me.BunifuTileButton1.Size = New System.Drawing.Size(21, 21)
+        Me.BunifuTileButton1.Size = New System.Drawing.Size(30, 34)
         Me.BunifuTileButton1.TabIndex = 4
         '
         'warningpass
@@ -134,17 +134,17 @@ Partial Class Form1
         Me.BunifuTileButton3.color = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.BunifuTileButton3.colorActive = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.BunifuTileButton3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuTileButton3.Font = New System.Drawing.Font("Century Gothic", 15.75!)
+        Me.BunifuTileButton3.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BunifuTileButton3.ForeColor = System.Drawing.Color.White
         Me.BunifuTileButton3.Image = Nothing
-        Me.BunifuTileButton3.ImagePosition = 60
+        Me.BunifuTileButton3.ImagePosition = 70
         Me.BunifuTileButton3.ImageZoom = 60
-        Me.BunifuTileButton3.LabelPosition = 41
+        Me.BunifuTileButton3.LabelPosition = 29
         Me.BunifuTileButton3.LabelText = "-"
-        Me.BunifuTileButton3.Location = New System.Drawing.Point(511, 15)
+        Me.BunifuTileButton3.Location = New System.Drawing.Point(501, 2)
         Me.BunifuTileButton3.Margin = New System.Windows.Forms.Padding(6)
         Me.BunifuTileButton3.Name = "BunifuTileButton3"
-        Me.BunifuTileButton3.Size = New System.Drawing.Size(20, 21)
+        Me.BunifuTileButton3.Size = New System.Drawing.Size(30, 34)
         Me.BunifuTileButton3.TabIndex = 7
         '
         'Form1
